@@ -18,6 +18,7 @@
         <module>eurekaserverdemo7003</module>
         <module>providerdemo8002</module>
         <module>providerdemo8003</module>
+        <module>cloudconfig-5001</module>
 
     </modules>
     <groupId>com.zempty</groupId>
