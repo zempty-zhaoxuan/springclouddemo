@@ -20,6 +20,7 @@
         <module>providerdemo8003</module>
         <module>cloudconfig-5001</module>
         <module>cloud-client-config4001</module>
+        <module>cloudzuuldemo3001</module>
 
     </modules>
     <groupId>com.zempty</groupId>
