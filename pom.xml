@@ -22,6 +22,9 @@
         <module>cloud-client-config4001</module>
         <module>cloudzuuldemo3001</module>
         <module>cloudribbon2001</module>
+        <module>cloudFeign9001</module>
+        <module>cloudhystrix</module>
+        <module>cloudhystrixdashboard9003</module>
 
     </modules>
     <groupId>com.zempty</groupId>

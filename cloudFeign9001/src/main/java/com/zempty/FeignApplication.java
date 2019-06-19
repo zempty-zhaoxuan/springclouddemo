@@ -1,22 +1,21 @@
 package com.zempty;
 
-import com.rule.MySelfRule;
+import com.zempty.rule.MySelfRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 
-/**
- * @author zempty
- * @create 2019-06-18 5:13 PM
- **/
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableEurekaClient
-//自定义自己的轮询规则(不能在主启动类路径和子包的路径下面)
+@EnableFeignClients
+//使用 fegin 进行面向接口的编程，同时处理负责具横
 @RibbonClient(name="PROVIDER6",configuration = {MySelfRule.class})
-public class RibbonApplication {
+//可以搭配 ribbon 一起使用
+public class FeignApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RibbonApplication.class);
+        SpringApplication.run(FeignApplication.class);
     }
 }

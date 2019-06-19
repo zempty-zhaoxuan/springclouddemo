@@ -5,15 +5,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
-/**
- * @author zempty
- * @create 2019-06-14 12:08 PM
- **/
 @SpringBootApplication
-@EnableEurekaClient
+//下面的这个注解是针对请求的方法出错会进行熔断的处理
 @EnableCircuitBreaker
-public class Provider8001Application {
+
+@EnableEurekaClient
+public class HystrixApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Provider8001Application.class);
+        SpringApplication.run(HystrixApplication.class);
     }
 }
