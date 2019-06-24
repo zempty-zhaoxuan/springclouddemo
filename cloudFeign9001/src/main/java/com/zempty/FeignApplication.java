@@ -11,7 +11,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 @EnableEurekaClient
 @EnableFeignClients
-//使用 fegin 进行面向接口的编程，同时处理负责具横
+//使用 fegin 进行面向接口的编程，同时使用 ribbon 处理负载均衡
 @RibbonClient(name="PROVIDER6",configuration = {MySelfRule.class})
 //可以搭配 ribbon 一起使用
 public class FeignApplication {
