@@ -11,8 +11,12 @@ import java.util.List;
 @RestController
 public class DeptController {
 
-    @Autowired
     private FeignInterface feignInterface;
+
+    @Autowired
+    public DeptController(FeignInterface feignInterface) {
+        this.feignInterface = feignInterface;
+    }
 
     @GetMapping("/getAll")
     public List<Dept> getDepts() {

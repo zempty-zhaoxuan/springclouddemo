@@ -9,6 +9,7 @@ import java.util.List;
 //这里对 fegin 进行了处理，表明了 fallbackFactory
 @FeignClient(value="PROVIDER6",fallbackFactory = FallBackDemo.class)
 public interface FeignInterface {
+
     @GetMapping("/list")
     public List<Dept> getDepts();
 }
